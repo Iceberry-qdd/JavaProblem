@@ -19,9 +19,8 @@ public class Problem6 {
     public static ArrayList<String> getNewPoke(ArrayList<String> poke) {
         ArrayList<String> newpoke = new ArrayList<>();
         Random num = new Random();
-
-        for (int i = 0; i < 5; i++) {
-            int n = num.nextInt(53);
+        for (int i = 0; i < 52; i++) {//[v2.0]改i<5为i<52[2020-1-17]
+            int n = num.nextInt(52);//[v2.0]改随机范围53为52[2020-1-17]
             newpoke.add(poke.get(n));
         }
         return newpoke;
@@ -29,9 +28,8 @@ public class Problem6 {
     public static void printNewPoke(ArrayList<String> newpoke, int n) {
         System.out.println("随机" + n + "张牌：");
         for (int i = 0; i < n; i++)
-            if (n <= 52 && n >= 0) {
+            if (n <= 52 && n >= 0)
                 System.out.print(newpoke.get(i) + " ");
-            }
             else{
                 System.out.println("超越范围，无法获取");
                 break;

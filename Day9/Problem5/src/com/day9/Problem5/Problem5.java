@@ -14,9 +14,9 @@ public class Problem5 {
         list.add(suv4);
         for(int i=0;i<list.size();i++)
             if(list.get(i).assort()==3)
-                Print(list.get(i));
+                print(list.get(i));//[v2.0]方法名改为小驼峰写法[2020-1-17]
     }
-    public static void Print(SUV suv) {//为什么必须是static?
+    public static void print(SUV suv) {//为什么必须是static?
         System.out.println("车型：" + suv.getBrand());
         System.out.println("    价格：" + suv.getPrice());
         System.out.println("    车长：" + suv.getLength());

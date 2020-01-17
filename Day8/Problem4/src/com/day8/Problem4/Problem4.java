@@ -15,15 +15,25 @@ public class Problem4 {
         System.out.println("源字符串中总共包含："+Times(srcStr,delStr)+"个"+delStr+"，");
         System.out.print("删除"+delStr+"后的字符串为：");
         NewString(srcStr,delStr);
-        //System.out.println(srcStr);
     }
+    /*[v1.0]使用spilt实现[2020-1-14]
     public static int Times(String srcStr,String delStr){
         String[] newsrcStr=srcStr.split(delStr);
         return newsrcStr.length-1;
-    }
+    }*/
     public static void NewString(String srcStr,String delStr){
         String[] newsrcStr=srcStr.split(delStr);
         for(int i=0;i<newsrcStr.length;i++)
             System.out.print(newsrcStr[i]);
+    }
+    //[v2.0]使用indexOf方法实现[2020-1-17]
+    public static int Times(String s1, String s2){
+        int count=0;
+        int index=0;
+        while(s1.indexOf(s2,index)!=-1){
+            count++;
+            index = s1.indexOf(s2, index) + 1;
+        }
+        return count;
     }
 }

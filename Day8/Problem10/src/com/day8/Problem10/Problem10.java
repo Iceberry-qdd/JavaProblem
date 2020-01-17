@@ -31,11 +31,20 @@ public class Problem10 {
                 flag2 = true;
             break;
         }
+        /*[v1.0]
         if(flag1!=true)
             System.out.println("没有该用户");
         else if(flag2==false)
             System.out.println("密码错误");
         else
-            System.out.println("登陆成功");
+            System.out.println("登陆成功");*/
+
+        //[v2.0]精简if语句[2020-1-17]
+        if(!flag1)
+            System.out.println("没有该用户");
+        else if(!flag2)
+            System.out.println("密码错误");
+        else
+            System.out.println("登录成功");
     }
 }
