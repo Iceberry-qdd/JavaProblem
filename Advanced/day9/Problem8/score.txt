@@ -1,0 +1,3 @@
+zhangsan = 90 
+lisi = 80 
+wangwu = 85 
